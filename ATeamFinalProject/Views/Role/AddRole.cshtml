@@ -1,7 +1,10 @@
 ﻿@model Microsoft.AspNetCore.Identity.IdentityRole
-<form asp-controller="Role" asp-action="AddRole" method="post">
-    <label asp-for="Name"></label>
+<form class="form-inline" role="form" asp-controller="Role" asp-action="AddRole" method="post">
+    <div class="form-group">
+    <label asp-for="Name">Role Name:</label>
     <input asp-for="Name" />
+        </div>
     <br />
-    <button type="submit">Add Role</button>
+    <button type="submit" class="btn btn-success">Add Role</button>
 </form>
+<p><a asp-controller="Admin" asp-action="Index">Return to Admin Page</a></p>

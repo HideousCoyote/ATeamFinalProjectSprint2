@@ -1,10 +1,21 @@
 ﻿@model ATeamFinalProject.Models.Coach
-<form asp-controller="Coach" asp-action="AddProfile" method="post">
-    <label asp-for="CoachName"></label>
-    <input asp-for="CoachName" />
-    <br />
-    <label asp-for="CoachNumber"></label>
-    <input asp-for="CoachNumber" />
-    <br />
-    <button type="submit">Add Coach Profile </button>
+
+<form class="form-horizontal" role="form" asp-controller="Coach" asp-action="AddProfile" method="post">
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" asp-for="CoachName">Name:</label>
+        <div class="col-sm-10 w-25">
+            <input type="text" asp-for="CoachName" class="form-control" />
+        </div>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label class="control-label col-sm-2" asp-for="CoachNumber">Phone:</label>
+        <div class="col-sm-10">
+            <input type="tel" asp-for="CoachName" class="form-control" />
+        </div>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-info btn-md">Add Profile</button>
 </form>
+<p><a asp-controller="Coach" asp-action="Index">Return to Coaches Home</a></p>

@@ -8,11 +8,13 @@
     else
     {
         <h3>All Users</h3>
-        <table border="1">
+        <table class="table">
+            <thead>
             <tr>
                 <th>User Name</th>
                 <th>Add Role</th>
             </tr>
+                </thead>
             @foreach (var user in Model)
             {
                 <tr>
