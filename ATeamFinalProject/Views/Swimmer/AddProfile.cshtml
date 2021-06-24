@@ -1,0 +1,21 @@
+﻿@model ATeamFinalProject.Models.Swimmer
+<h2>Add Your Profile</h2>
+<form role="form" asp-action="AddProfile">
+    <div class="form-group w-50">
+    <input asp-for="@Model.UserId" type="hidden" />
+    <label asp-for="SwimmerName">Name</label>
+    <input asp-for="SwimmerName" class="form-control"/>
+    <br />
+    <label asp-for="SwimmerPhone">Phone Number</label>
+    <input asp-for="SwimmerPhone"  class="form-control"/>
+    <br />
+    <label asp-for="DOB">Date of Birth</label>
+    <input asp-for="DOB" class="form-control" />
+    <br />
+    <label asp-for="Gender">Gender</label>
+    <input asp-for="Gender" class="form-control"/>
+    <br />
+        </div>
+    <button type="submit" class="btn btn-info btn-md" >Add Profile</button>
+</form>
+<p><a asp-action="Index">Back to Swimmer Home Page</a></p>

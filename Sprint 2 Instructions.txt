@@ -1,0 +1,27 @@
+A-Team Sprint 2 Instructions
+
+1.  Unzip File. 
+2.  Load ATeamFinalProject.sln to Visual Studio
+3.  In VS, go to Tools > NuGet Package Manager > Package Manager Console
+4.  Type Add-Migration and update database. 
+
+The application will start in your default browser at the Login/Register page.
+
+URLs Associated
+
+localhost/Account/AllUser
+localhost/Account/Register
+
+
+localhost/Role/AllRole
+localhost/Role/AddRole
+localhost/Role/AddUserRole
+
+localhost/Lesson/AddLesson
+localhost/Lesson/AllLesson
+
+localhost/Coach/Index
+localhost/Coach/AddProfile
+
+localhost/Swimmer/Index 
+localhost/Swimmer/AddProfile

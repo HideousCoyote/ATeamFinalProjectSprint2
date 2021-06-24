@@ -1,0 +1,11 @@
+﻿@model ATeamFinalProject.ViewModels.RoleAddUserRoleViewModel
+<p>Pick a Role For @Model.User.UserName</p>
+<form asp-controller="Role" asp-action="AddUserRole" method="post">
+    <div asp-validation-summary="All"></div>
+    <input asp-for="@Model.User.Id" type="hidden" />
+    <label asp-for="Role"></label>
+    <select asp-for="Role" asp-items="@Model.RoleList"></select>
+    <br />
+    <button type="submit">Add Role</button>
+</form>
+<p><a asp-controller="Account" asp-action="AllUser">Back to User List</a></p>

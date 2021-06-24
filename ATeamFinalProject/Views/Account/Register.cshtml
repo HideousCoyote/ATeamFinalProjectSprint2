@@ -1,0 +1,22 @@
+﻿@model ATeamFinalProject.ViewModels.AccountRegisterViewModel
+<h2>User Registration</h2>
+<form role="form" asp-action="Register" method="post" >
+    <div class="form-group w-50" asp-validation-summary="All">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" placeholder="Enter Email"/>
+        <span asp-validation-for="Email"></span>
+        <br />
+
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" placeholder="Password"/>
+        <span asp-validation-for="Password"></span>
+        <br />
+
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-md">Register</button>
+</form>
+

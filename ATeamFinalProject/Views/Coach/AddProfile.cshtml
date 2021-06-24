@@ -1,0 +1,10 @@
+﻿@model ATeamFinalProject.Models.Coach
+<form asp-controller="Coach" asp-action="AddProfile" method="post">
+    <label asp-for="CoachName"></label>
+    <input asp-for="CoachName" />
+    <br />
+    <label asp-for="CoachNumber"></label>
+    <input asp-for="CoachNumber" />
+    <br />
+    <button type="submit">Add Coach Profile </button>
+</form>

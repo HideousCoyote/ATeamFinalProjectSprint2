@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ATeamFinalProject.Models.Lesson>
+<p>
+    <a asp-action="AddLesson"> Add a Lesson</a>
+</p>
+
+@{
+    if (Model.Count() < 1)
+    {
+        <p>No Lessons in database.</p>
+
+    }
+    else
+    {
+        <h3>All Lessons</h3>
+        <table border="1">
+            <tr>
+                <th>Lesson ID</th>
+                <th>Skill Level</th>
+                <th>Tuition</th>
+            </tr>
+            @foreach (var lesson in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-controller="Lesson" asp-action="AddLesson"
+                           asp-route-id="@lesson.LessonId">@lesson.LessonId</a>
+                    </td>
+                    <td>@lesson.SkillLevel</td>
+                    <td>@lesson.Tuition</td>
+                    <td>
+                        <a asp-controller="Lesson" asp-action="AllClubStudent"
+                           asp-route-id="@lesson.LessonId">@lesson.Tuition</a>
+                    </td>
+                    
+                </tr>
+
+            }
+        </table>
+    }
+}

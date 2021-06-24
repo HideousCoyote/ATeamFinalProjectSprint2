@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ATeamFinalProject.Models.Session>
+@{ 
+    if (Model.Count() < 1)
+            {
+                <p>No Sessions in Database Yet.</p>
+            }
+            else
+            {
+                <h3>All Sessions</h3>
+                <table border="1">
+                    <tr>
+                        <th>Session Id</th>
+                        <th>Session Start Date</th>
+                        <th>Session End Date</th>
+                        <th>Seats Available</th>
+                        <th>Daily Start Time</th>
+                        <th>Coaches Name</th>
+                    </tr>
+                    @foreach (var session in Model)
+                {
+                    <tr>
+                        <td>@session.SessionId</td>
+                        <td>@session.StartDate</td>
+                        <td>@session.EndDate</td>
+                        <td>@session.SeatsAvailable</td>
+                        <td>@session.StartTime</td>
+                        <td>@session.Coach.CoachName</td>
+                        <td>
+                            @{ 
+                                if (session.SeatsAvailable < 1)
+                    {
+                        <p>Class is Full</p>
+                    }
+                    else
+                    {
+                        <a asp-controller="Swimmer" asp-action="EnrollSession" asp-route-id="@session.SessionId">Register</a>
+                    }
+                            }
+                        </td>
+                    </tr>
+                }
+                </table>
+            }
+}
+<p><a asp-action="Index">Back to Swimmer Home Page.</a></p>

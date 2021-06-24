@@ -1,0 +1,18 @@
+﻿@model ATeamFinalProject.ViewModels.AccountLoginViewModel
+<h2>User Login</h2>
+<form role="form" asp-action="Login" method="post">
+    <div class="form-group w-50" asp-validation-summary="All">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" placeholder="Enter Email" />
+        <span asp-validation-for="Email"></span>
+        <br />
+
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" placeholder="Password" />
+        <span asp-validation-for="Password"></span>
+        <br />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-md">Login</button>
+</form>
+<p>New Swimmer?<a asp-action="Register">Register Here</a></p>
